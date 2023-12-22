@@ -38,7 +38,7 @@ namespace Sprout.Exam.WebApp.Repositories
             Employee newEmployee = new Employee();
             newEmployee.FullName = employee.FullName;
             newEmployee.Birthdate = employee.Birthdate;
-            newEmployee.EmployeeTypeId = employee.TypeId;
+            newEmployee.EmployeeTypeId = employee.EmployeeTypeId;
             newEmployee.Tin = employee.Tin;
 
             _dbContext.Employee.Add(newEmployee);
@@ -53,7 +53,7 @@ namespace Sprout.Exam.WebApp.Repositories
             newEmployee.Id = employee.Id;
             newEmployee.FullName = employee.FullName;
             newEmployee.Birthdate = employee.Birthdate;
-            newEmployee.EmployeeTypeId = employee.TypeId;
+            newEmployee.EmployeeTypeId = employee.EmployeeTypeId;
             newEmployee.Tin = employee.Tin;
 
             _dbContext.Employee.Update(newEmployee);

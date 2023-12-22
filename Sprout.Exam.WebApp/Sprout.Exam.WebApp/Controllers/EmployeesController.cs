@@ -55,9 +55,9 @@ namespace Sprout.Exam.WebApp.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(EditEmployeeDto input)
         {
-            if (input.TypeId == 0)
+            if (input.EmployeeTypeId == 0)
             {
-                input.TypeId = 1;
+                input.EmployeeTypeId = 1;
             }
 
             var item = await _employeeService.EditEmployee(input);
@@ -66,7 +66,7 @@ namespace Sprout.Exam.WebApp.Controllers
             item.FullName = input.FullName;
             item.Tin = input.Tin;
             item.Birthdate = input.Birthdate;
-            item.EmployeeTypeId = input.TypeId;
+            item.EmployeeTypeId = input.EmployeeTypeId;
             return Ok(item);
         }
 
